@@ -1,5 +1,5 @@
 <!-- Web Application Manifest -->
-<link rel="manifest" href="{{ route('RlPWA.manifest') }}">
+<link rel="manifest" href="{{ $config['url_manifest'] ?? '' }}">
 <!-- Chrome for Android theme color -->
 <meta name="theme-color" content="{{ $config['theme_color'] }}">
 
@@ -33,7 +33,7 @@
 <script type="text/javascript">
     // Initialize the service worker
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/serviceworker.js', {
+        navigator.serviceWorker.register('/sw.js', {
             scope: '.'
         }).then(function (registration) {
             // Registration was successful

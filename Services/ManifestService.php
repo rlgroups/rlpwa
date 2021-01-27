@@ -59,6 +59,9 @@ class ManifestService
         foreach (config($pwa . '.manifest.custom') as $tag => $value) {
              $basicManifest[$tag] = $value;
         }
+
+        $basicManifest['url_manifest'] = "/{$appName}/manifest.json";
+
         return $basicManifest;
     }
 
