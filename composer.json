@@ -19,7 +19,6 @@
             "RlPWA\\": ""
         }
     },
-    "minimum-stability": "stable",
     "extra": {
         "laravel": {
             "providers": [
